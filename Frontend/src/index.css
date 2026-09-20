@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --hh-font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --hh-font-body: 'Inter', sans-serif;
+  
+  --hh-primary: #0f172a;
+  --hh-primary-light: #1e293b;
+  --hh-accent: #ff385c;
+  --hh-accent-hover: #e00b41;
+  --hh-accent-gradient: linear-gradient(135deg, #ff385c 0%, #e11d48 100%);
+  --hh-teal: #0d9488;
+  --hh-teal-gradient: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+  --hh-emerald: #10b981;
+  --hh-amber: #f59e0b;
+  
+  --hh-bg: #f8fafc;
+  --hh-card-bg: #ffffff;
+  --hh-text-main: #0f172a;
+  --hh-text-muted: #64748b;
+  --hh-border: rgba(226, 232, 240, 0.9);
+  --hh-border-hover: rgba(203, 213, 225, 1);
+  
+  --hh-glass-bg: rgba(255, 255, 255, 0.82);
+  --hh-glass-border: rgba(255, 255, 255, 0.4);
+  
+  --hh-shadow-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+  --hh-shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+  --hh-shadow-xl: 0 24px 48px -12px rgba(15, 23, 42, 0.14);
+  --hh-shadow-glow: 0 0 25px rgba(255, 56, 92, 0.25);
+  
+  --hh-radius-md: 12px;
+  --hh-radius-lg: 18px;
+  --hh-radius-xl: 24px;
+  --hh-radius-full: 9999px;
+  
+  --hh-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--hh-font-body);
+  background-color: var(--hh-bg);
+  color: var(--hh-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--hh-font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 56, 92, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(255, 56, 92, 0.45); }
+}
+
+/* Global Status Badges */
+.hh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--hh-radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: var(--hh-transition);
+}
+
+.hh-badge-pending {
+  background: #fffbe6;
+  color: #d48806;
+  border: 1px solid #ffe58f;
+}
+
+.hh-badge-accepted {
+  background: #e6f7ff;
+  color: #0958d9;
+  border: 1px solid #91caff;
+}
+
+.hh-badge-confirmed {
+  background: #f6ffed;
+  color: #389e0d;
+  border: 1px solid #b7eb8f;
+}
+
+.hh-badge-rejected {
+  background: #fff2f0;
+  color: #cf1322;
+  border: 1px solid #ffccc7;
+}
+
+.hh-badge-cancelled {
+  background: #f5f5f5;
+  color: #595959;
+  border: 1px solid #d9d9d9;
+}
+
+/* Glassmorphism utility */
+.hh-glass-panel {
+  background: var(--hh-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--hh-border);
+  box-shadow: var(--hh-shadow-md);
+}
+
+/* Luxury Button Base */
+.hh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--hh-radius-full);
+  font-family: var(--hh-font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--hh-transition);
+  border: none;
+  text-decoration: none;
+}
+
+.hh-btn-accent {
+  background: var(--hh-accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 56, 92, 0.3);
+}
+
+.hh-btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 56, 92, 0.45);
+}
+
+.hh-btn-outline {
+  background: transparent;
+  color: var(--hh-primary);
+  border: 1.5px solid var(--hh-border);
+}
+
+.hh-btn-outline:hover {
+  border-color: var(--hh-primary);
+  background: rgba(15, 23, 42, 0.04);
+}

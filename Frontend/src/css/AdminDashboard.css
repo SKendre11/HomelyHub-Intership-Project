@@ -1,0 +1,259 @@
+.admin-dashboard-container {
+  max-width: 1240px;
+  margin: 36px auto;
+  padding: 0 24px;
+}
+
+.admin-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.admin-header p {
+  color: #666666;
+  font-size: 15px;
+  margin: 0 0 28px 0;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.admin-stat-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+  font-size: 32px;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.user-icon {
+  color: #1976d2;
+  background: #e3f2fd;
+}
+
+.prop-icon {
+  color: #ed6c02;
+  background: #fff3e0;
+}
+
+.book-icon {
+  color: #9c27b0;
+  background: #f3e5f5;
+}
+
+.rev-icon {
+  color: #2e7d32;
+  background: #e8f5e9;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  display: block;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666666;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  border-bottom: 2px solid #eeeeee;
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.admin-tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.admin-tab-btn.active {
+  color: #1976d2;
+  border-bottom-color: #1976d2;
+}
+
+.admin-tab-section {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.admin-tab-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  background: #f8f9fa;
+  padding: 14px 16px;
+  font-weight: 700;
+  color: #444444;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: left;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.user-cell,
+.property-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.property-img-sm {
+  width: 48px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.role-select,
+.status-select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-color: #a5d6a7;
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #f57f17;
+  border-color: #ffe082;
+}
+
+.status-blocked {
+  background-color: #ffebee;
+  color: #c62828;
+  border-color: #ef9a9a;
+}
+
+.btn-admin-action {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-admin-action.delete {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.btn-admin-action.delete:hover {
+  background-color: #ffcdd2;
+}
+
+.btn-admin-action.cancel {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.btn-admin-action.cancel:hover {
+  background-color: #ffe0b2;
+}
+
+.amount-cell {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.no-data-msg {
+  color: #777777;
+  font-style: italic;
+}
+
+.admin-alert {
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admin-alert-error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.admin-alert-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.admin-alert button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+}
