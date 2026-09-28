@@ -15,6 +15,8 @@ import {
   removeFromWishlist,
 } from "../controllers/authController.js";
 
+import { generateDescription } from "../controllers/aiController.js";
+
 const router = express.Router();
 
 router.route("/signup").post(signup);
@@ -35,6 +37,9 @@ router.route("/wishlist/:propertyId")
   .post(protect, addToWishlist)
   .delete(protect, removeFromWishlist);
 
+router.route("/generateDescription").post(generateDescription);
+
 export { router };
+
 
 

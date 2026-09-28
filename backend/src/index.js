@@ -9,7 +9,7 @@ import { bookingRouter } from "./routes/bookingRouter.js";
 import { notificationRouter } from "./routes/notificationRouter.js";
 import { hostRouter } from "./routes/hostRouter.js";
 import { adminRouter } from "./routes/adminRouter.js";
-
+import { tripRouter } from "./routes/tripRouter.js";
 
 dotenv.config();
 
@@ -64,6 +64,8 @@ app.use("/api/v1/rent/user/booking", bookingRouter);
 app.use("/api/v1/notifications", notificationRouter);
 app.use("/api/v1/host", hostRouter);
 app.use("/api/v1/admin", adminRouter);
+app.use("/api/v1/rent/trip", tripRouter);
+
 
 
 

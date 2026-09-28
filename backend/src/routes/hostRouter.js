@@ -16,7 +16,7 @@ hostRouter.use(isAuthenticatedUser);
 hostRouter.get("/properties", getMyProperties);
 hostRouter.post("/properties", createHostProperty);
 hostRouter.put("/properties/:id", updateHostProperty);
-hostRouter.delete("/properties/:id", deleteHostProperty);
+hostRouter.delete("/properties/:id", deleteHostProperty); 
 
 hostRouter.get("/bookings", getHostBookings);
 hostRouter.get("/stats", getHostStats);

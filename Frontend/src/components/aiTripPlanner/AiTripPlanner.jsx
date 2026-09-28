@@ -36,8 +36,20 @@ const AiTripPlanner = () => {
   const handleGenerate = async (e) => {
     e.preventDefault();
 
-    if (!destination || !budget || !days || !people) {
-      toast.error("Please fill in all the fields");
+    if (!destination.trim()) {
+      toast.error("Please enter a destination");
+      return;
+    }
+    if (!budget || Number(budget) <= 0) {
+      toast.error("Please enter a valid budget");
+      return;
+    }
+    if (!days || Number(days) <= 0) {
+      toast.error("Please enter number of days (at least 1)");
+      return;
+    }
+    if (!people || Number(people) <= 0) {
+      toast.error("Please enter number of guests");
       return;
     }
 
@@ -45,20 +57,22 @@ const AiTripPlanner = () => {
     setResult(null);
     try {
       const data = await getTripPlan({
-        destination,
-        budget,
-        days,
-        people,
+        destination: destination.trim(),
+        budget: Number(budget),
+        days: Number(days),
+        people: Number(people),
         interests,
       });
       setResult(data);
-      toast.success("Your trip plan is ready");
+      toast.success("Your trip plan is ready!");
     } catch (error) {
-      toast.error("Could not create a trip plan, please try again");
+      const msg = error?.response?.data?.message || "Could not create a trip plan, please try again";
+      toast.error(msg);
       console.error(error);
     }
     setLoading(false);
   };
+
 
   return (
     <div className="trip-page">
@@ -221,17 +235,26 @@ const AiTripPlanner = () => {
               {result.properties.map((property) => (
                 <article className="trip-property" key={property._id}>
                   <img
-                    src={property.images[0].url}
+                    src={
+                      property.images && property.images.length > 0 && property.images[0].url
+                        ? property.images[0].url
+                        : "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
+                    }
                     alt={property.propertyName}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80";
+                    }}
                   />
                   <div className="trip-property-body">
                     <h4>{property.propertyName}</h4>
                     <p className="trip-property-place">
-                      {property.address.city}, {property.address.state}
+                      {property.address?.city || ""}, {property.address?.state || ""}
                     </p>
                     <p className="trip-property-price">
-                      <span>Rs {property.price}</span> per night
+                      <span>Rs {property.price?.toLocaleString("en-IN")}</span> per night
                     </p>
+
                     <Link
                       className="trip-view"
                       to={`/propertylist/${property._id}`}

@@ -315,76 +315,107 @@ const PropertyList = () => {
   return (
     <div style={{ minHeight: "100vh" }}>
       {/* Hero Section */}
-      <section
-        style={{
-          position: "relative",
-          margin: "16px 24px 32px 24px",
-          borderRadius: "32px",
-          overflow: "hidden",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0d9488 100%)",
-          color: "#ffffff",
-          padding: "80px 40px",
-          textAlign: "center",
-          boxShadow: "0 20px 40px -15px rgba(15, 23, 42, 0.25)",
-        }}
-      >
-        <div style={{ position: "relative", zIndex: 2, maxWidth: "800px", margin: "0 auto" }}>
-          <span
+      <section className="hero-banner">
+        {/* Dark subtle gradient overlay on left side for text readability */}
+        <div className="hero-overlay" />
+
+        {/* Left Aligned Hero Text & CTA */}
+        <div className="hero-content" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" }}>
+          <div
             style={{
-              background: "rgba(255, 255, 255, 0.15)",
-              backdropFilter: "blur(10px)",
+              background: "rgba(255, 255, 255, 0.18)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
               padding: "6px 16px",
               borderRadius: "9999px",
-              fontSize: "13px",
+              fontSize: "12px",
               fontWeight: 700,
-              letterSpacing: "0.05em",
+              letterSpacing: "0.06em",
               textTransform: "uppercase",
               display: "inline-flex",
               alignItems: "center",
               gap: "6px",
-              marginBottom: "20px",
+              marginBottom: "22px",
+              color: "#ffffff",
+              boxShadow: "0 2px 10px rgba(0,0,0,0.15)",
+              alignSelf: "flex-start",
             }}
           >
-            ✨ Luxury Travel & Accommodations
-          </span>
+            <span style={{ color: "#fbbf24", fontSize: "14px" }}>★</span>
+            LUXURY TRAVEL & ACCOMMODATIONS
+          </div>
 
           <h1
             style={{
-              fontFamily: "'Outfit', sans-serif",
-              fontSize: "clamp(32px, 5vw, 54px)",
+              fontFamily: "'Outfit', 'Plus Jakarta Sans', sans-serif",
+              fontSize: "clamp(32px, 4.2vw, 50px)",
               fontWeight: 800,
-              lineHeight: "1.1",
-              marginBottom: "20px",
-              letterSpacing: "-0.03em",
+              lineHeight: "1.12",
+              marginBottom: "18px",
+              letterSpacing: "-0.02em",
+              color: "#ffffff",
+              textShadow: "0 2px 10px rgba(0,0,0,0.25)",
+              textAlign: "left",
+              marginRight: "auto",
             }}
           >
-            Find your sanctuary anywhere in the world.
+            Find your sanctuary<br />
+            anywhere in the world.
           </h1>
 
           <p
             style={{
-              fontSize: "18px",
-              color: "#cbd5e1",
-              maxWidth: "600px",
-              margin: "0 auto 36px auto",
-              lineHeight: "1.6",
+              fontSize: "16px",
+              color: "rgba(255, 255, 255, 0.92)",
+              maxWidth: "500px",
+              marginBottom: "32px",
+              lineHeight: "1.55",
+              fontWeight: 400,
+              textAlign: "left",
+              marginRight: "auto",
             }}
           >
             Handpicked boutique villas, luxury apartments, and tranquil getaways verified for pure comfort.
           </p>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-            <Link
-              to="/ai-trip-planner"
-              className="hh-btn hh-btn-accent"
-              style={{ padding: "14px 28px", fontSize: "16px" }}
-            >
-              <span className="material-symbols-outlined">auto_awesome</span>
-              Plan Trip with AI
-            </Link>
-          </div>
+          <Link
+            to="/ai-trip-planner"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              textDecoration: "none",
+              background: "linear-gradient(135deg, #ff385c 0%, #e11d48 100%)",
+              color: "#ffffff",
+              padding: "13px 28px",
+              borderRadius: "9999px",
+              fontSize: "15px",
+              fontWeight: 700,
+              boxShadow: "0 8px 24px rgba(255, 56, 92, 0.4)",
+              transition: "all 0.2s ease",
+              cursor: "pointer",
+              alignSelf: "flex-start",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 12px 28px rgba(255, 56, 92, 0.55)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(255, 56, 92, 0.4)";
+            }}
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
+              sparkles
+            </span>
+            <span>Plan Trip with AI</span>
+            <span style={{ fontSize: "18px", fontWeight: 700, marginLeft: "2px" }}>→</span>
+          </Link>
         </div>
+
       </section>
+
 
       {/* Category Filter Chips Bar */}
       <div
