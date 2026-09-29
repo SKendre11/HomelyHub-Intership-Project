@@ -1,4 +1,4 @@
-# 🏡 HomelyHub
+#  HomelyHub
 
 ### Full-Stack Property Rental Platform
 
@@ -8,19 +8,19 @@ The project was developed as part of my Full-Stack Web Development internship at
 
 ---
 
-## 🌐 Live Project
+##  Live Project
 
 🔗 [Visit HomelyHub](https://glittering-stroopwafel-1d7c1a.netlify.app/)
 
 ---
 
-## 📂 Project Repository
+##  Project Repository
 
 This repository contains the complete source code for the HomelyHub full-stack web application.
 
 ---
 
-## 📸 Project Preview
+##  Project Preview
 
 ### Homepage
 
@@ -30,9 +30,9 @@ This repository contains the complete source code for the HomelyHub full-stack w
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👤 User Features
+###  User Features
 
 - User Registration
 - User Login
@@ -52,7 +52,7 @@ This repository contains the complete source code for the HomelyHub full-stack w
 - Wishlist
 - Property Booking
 
-### 🏠 Property Features
+###  Property Features
 
 - Property Listings
 - Property Images
@@ -65,7 +65,7 @@ This repository contains the complete source code for the HomelyHub full-stack w
 - Amenities
 - Ratings
 
-### 📅 Booking Features
+###  Booking Features
 
 - Select Check-in Date
 - Select Check-out Date
@@ -77,7 +77,7 @@ This repository contains the complete source code for the HomelyHub full-stack w
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -112,7 +112,7 @@ This repository contains the complete source code for the HomelyHub full-stack w
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```text
                     HOMELYHUB
