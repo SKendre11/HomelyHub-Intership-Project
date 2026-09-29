@@ -1,36 +1,83 @@
-# HomelyHub
+# 🏡 HomelyHub
 
-A full-stack property rental platform inspired by Airbnb, where users can explore properties, view property details, and manage bookings through a simple and user-friendly interface.
+### Full-Stack Property Rental Platform
 
-## Live Project
+HomelyHub is a full-stack property rental platform inspired by modern accommodation booking platforms. It allows users to explore rental properties, view detailed property information, save properties to their wishlist, and proceed through the booking process.
 
-[Visit HomelyHub] https://glittering-stroopwafel-1d7c1a.netlify.app 
+The project was developed as part of my Full-Stack Web Development internship at **WebStack Academy**.
 
-## Project Repository
+---
 
-This repository contains the source code for the HomelyHub project.
+## 🌐 Live Project
 
-## Features
+🔗 [Visit HomelyHub](https://glittering-stroopwafel-1d7c1a.netlify.app/)
 
-- User Registration & Login
+---
+
+## 📂 Project Repository
+
+This repository contains the complete source code for the HomelyHub full-stack web application.
+
+---
+
+## 📸 Project Preview
+
+### Homepage
+
+![HomelyHub Homepage](Frontend/public/assets/hero_bg.jpg)
+
+> Add actual screenshots of the homepage, property details page, login page, wishlist, and booking flow here for a better project showcase.
+
+---
+
+## ✨ Features
+
+### 👤 User Features
+
+- User Registration
+- User Login
+- Authentication & Authorization
+- User Profile Management
+- Protected Routes
 - Browse Rental Properties
 - Search Properties
-- Location-based Property Search
 - Property Type Filtering
+- Location-based Search
 - Price Filtering
 - Guest-based Search
-- Property Ratings
 - Bedroom/Room Filtering
 - Amenities Filtering
-- Property Details Page
+- Property Ratings
+- Property Details
 - Wishlist
 - Property Booking
-- Online Payment Integration
-- User Profile Management
-- Authentication & Authorization
-- Responsive User Interface
 
-## Tech Stack
+### 🏠 Property Features
+
+- Property Listings
+- Property Images
+- Property Details
+- Location Information
+- Property Type
+- Price per Night
+- Guest Capacity
+- Bedrooms
+- Amenities
+- Ratings
+
+### 📅 Booking Features
+
+- Select Check-in Date
+- Select Check-out Date
+- Select Number of Guests
+- Booking Request
+- Booking Validation
+- Owner Booking Management
+- Booking Status
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 
@@ -39,37 +86,58 @@ This repository contains the source code for the HomelyHub project.
 - React Router
 - Axios
 - Vite
+- HTML
 - CSS
+- JavaScript
 
 ### Backend
 
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
+- REST APIs
 - JWT Authentication
+- Mongoose
 
-### Other Technologies
+### Database
 
+- MongoDB
 - MongoDB Atlas
-- ImageKit
-- Payment Gateway
-- REST API
 
-## Project Structure
+### Development & Testing
+
+- Visual Studio Code
+- Postman
+- Git
+- GitHub
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-HomelyHub/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── ...
-│
-├── backend/
-│   ├── src/
-│   ├── package.json
-│   └── ...
-│
-└── README.md
+                    HOMELYHUB
+                        │
+                        ▼
+                React.js Frontend
+                        │
+                  Redux + Axios
+                        │
+                        ▼
+                 REST API Requests
+                        │
+                        ▼
+               Node.js + Express.js
+                        │
+             Authentication & Logic
+                        │
+                        ▼
+                   Mongoose
+                        │
+                        ▼
+                 MongoDB Atlas
+                        │
+                        ▼
+                   API Response
+                        │
+                        ▼
+                React User Interface
